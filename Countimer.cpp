@@ -71,9 +71,20 @@ uint8_t Countimer::getCurrentSeconds()
 	return _currentCountTime / 1000 % 3600 % 60 % 60;
 }
 
+uint32_t Countimer::getCurrentMilliSeconds()
+{
+	return _currentCountTime % 1000 / 10;
+}
+
 char* Countimer::getCurrentTime()
 {
 	sprintf(_formatted_time, "%02d:%02d:%02d", getCurrentHours(), getCurrentMinutes(), getCurrentSeconds());
+	return _formatted_time;
+}
+
+char* Countimer::getCurrentTime_MMSSss()
+{
+	sprintf(_formatted_time, "%02d:%02d:%02d", getCurrentMinutes(), getCurrentSeconds(), getCurrentMilliSeconds());
 	return _formatted_time;
 }
 

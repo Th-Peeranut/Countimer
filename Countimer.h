@@ -42,10 +42,16 @@ public:
 	// Returns timer's current seconds.
 	uint8_t getCurrentSeconds();
 
+	// Returns timer's current milliseconds.
+	uint32_t getCurrentMilliSeconds();
+
 	void setInterval(timer_callback callback, uint32_t interval);
 
 	// Returns current timer as formatted string HH:MM:SS
 	char* getCurrentTime();
+
+	// Returns current timer as formatted string MM:SS.ss
+	char* getCurrentTime_MMSSss();
 
 	// Returns true if counter is completed, otherwise returns false.
 	bool isCounterCompleted();

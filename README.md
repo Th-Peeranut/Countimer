@@ -22,6 +22,7 @@ The following are public methods for actions:
  * byte getCurrentHours()
  * byte getCurrentMinutes()
  * byte getCurrentSeconds()
+ * byte getCurrentMilliSeconds()
  * void setInterval()
  * String getCurrentTime()
  * bool isCounterCompleted()
